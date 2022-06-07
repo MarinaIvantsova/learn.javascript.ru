@@ -28,14 +28,11 @@
 // } else {
 //     console.log('We hope that this page looks ok!')
 // }
-let browsers = ['Edge', 'Opera'];
-if (browsers.includes('Edge')) {
+let browser = 'Opera';
+if (browser === 'Edge') {
     console.log("You've got the Edge!")
 }
-    if (browsers.includes('Chrome')
-    || browsers.includes('Firefox')
-    || browsers.includes('Safari')
-    || browsers.includes('Opera')) {
+else if (['Chrome', 'Firefox', 'Safari', 'Opera'].includes(browser)) {
     console.log('Okay we support these browsers too');
 } else {
     console.log('We hope that this page looks ok!');
