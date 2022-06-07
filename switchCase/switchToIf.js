@@ -31,7 +31,8 @@
 let browsers = ['Edge', 'Opera'];
 if (browsers.includes('Edge')) {
     console.log("You've got the Edge!")
-} if (browsers.includes('Chrome')
+}
+    if (browsers.includes('Chrome')
     || browsers.includes('Firefox')
     || browsers.includes('Safari')
     || browsers.includes('Opera')) {
