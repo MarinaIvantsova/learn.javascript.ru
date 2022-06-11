@@ -9,13 +9,17 @@ schedule["8:30"] = "get up";
 alert( isEmpty(schedule) ); // false
 */
 
-const schedule = {};
-schedule["8:30"] = "get up";
+let schedule = {
+    a: 5, 
+    b: 7};
 
-function isEmpty(obj) {
-    for (let key in obj) {
-        return false;
+let isEmpty = function(schedule) {
+    for ( let prop in schedule ){
+        console.log(prop);
+        console.log('зашел');
+        return false; 
     }
     return true;
 }
+
 console.log(isEmpty(schedule));
