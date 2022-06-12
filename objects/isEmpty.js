@@ -10,14 +10,15 @@ alert( isEmpty(schedule) ); // false
 */
 
 let schedule = {
-    a: 5, 
-    b: 7};
+    a: 5,
+    b: 7
+};
 
-let isEmpty = function(schedule) {
-    for ( let prop in schedule ){
+let isEmpty = function (schedule) {
+    for (let prop in schedule) {
         console.log(prop);
         console.log('зашел');
-        return false; 
+        return false;
     }
     return true;
 }
