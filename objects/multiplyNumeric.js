@@ -22,20 +22,19 @@ menu = {
 
 P.S. Используйте typeof для проверки, что значение свойства числовое.
 */
-
 let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
+  width: 200,
+  height: 300,
+  title: "My menu"
 };
 
-const multiplyNumeric = function () {
-    for (let key in menu) {
-        if (typeof (menu[key]) === 'number') {
-            menu[key] *= 2;
-        }
+function multiplyNumeric(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number") {
+      obj[prop] *= 2;
     }
-}
+  }
+};
 
-multiplyNumeric();
+multiplyNumeric(menu);
 console.log(menu);
