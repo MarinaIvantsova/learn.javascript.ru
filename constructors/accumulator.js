@@ -13,7 +13,7 @@ function Accumulator(startingValue) {
   this.value = startingValue;
 
   this.read = function() {
-    this.value = +prompt("Введите значение") + this.value;
+    this.value += +prompt("Введите значение");
   };
 
 }
