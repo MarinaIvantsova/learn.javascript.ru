@@ -21,7 +21,8 @@ function buildSign(occasion, name) {
    */
   
 function buildBirthdaySign(age) {
-    return age >= 50 ? "Happy Birthday! What a mature fellow you are." : "Happy Birthday! What a young fellow you are.";
+  let signifier =  age >= 50 ? "mature" : "young";
+  return `Happy Birthday! What a ${signifier} fellow you are.`
   }
   console.log(buildBirthdaySign(50));
   
@@ -49,7 +50,7 @@ function buildBirthdaySign(age) {
    */
   
 function costOf(sign, currency) {
-    let cost = 20 + 2 * sign.split('').length;
+    let cost = 20 + 2 * sign.length;
     let fixed = cost.toFixed(2);
     return `Your sign costs ${fixed} ${currency}.`
   }
