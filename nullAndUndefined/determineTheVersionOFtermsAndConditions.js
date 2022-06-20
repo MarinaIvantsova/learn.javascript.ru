@@ -49,4 +49,5 @@ const visitorNew = {
   function gtcVersion(visitor){
     return visitor.gtc?.version;
   }
+  
   console.log(gtcVersion(visitorOld));

@@ -22,4 +22,5 @@ return {
     ticketId,
 }
 }
+
 console.log(createVisitor('Verena Nardi', 45, 'H32AZ123'))

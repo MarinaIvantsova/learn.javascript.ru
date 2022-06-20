@@ -23,7 +23,9 @@ const visitor = {
   };
 
 function revokeTicket(visitor) {
-   visitor.ticketId = null;
-   return visitor;
+  let copyVisitor = {...visitor};
+  copyVisitor.ticketId = null;
+   return copyVisitor;
 }
+
 console.log(revokeTicket(visitor));

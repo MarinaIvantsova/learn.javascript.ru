@@ -34,11 +34,11 @@ const tickets = {
 function ticketStatus(tickets, ticketId) {
     if (tickets[ticketId] === undefined) {
         return 'unknown ticket id';
-    } if (tickets[ticketId] === null) {
+    } else if (tickets[ticketId] === null) {
         return 'not sold'
     }
 
     return `sold to ${tickets[ticketId]}`
-
 }
+
 console.log(ticketStatus(tickets, 'bfg'));
