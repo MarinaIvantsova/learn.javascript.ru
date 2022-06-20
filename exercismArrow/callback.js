@@ -22,13 +22,7 @@ function checkStatus(callback) {
 }
 
 function isServiceOnline() {
-    const callback = (x) => {
-      if(x === "ONLINE"){
-        return true
-      } 
-      return false
-    }
-    return checkStatus(callback);
+    return checkStatus((status) => status === 'ONLINE');
 }
 
 setStatus('ONLINE')
