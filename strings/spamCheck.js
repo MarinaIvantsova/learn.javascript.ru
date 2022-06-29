@@ -10,7 +10,7 @@ checkSpam("innocent rabbit") == false
 function checkSpam(str) {
   let lower = str.toLowerCase();
 
-  return  str.toLowerCase().includes('viagra') || lower.includes('xxx');    
+  return  lower.includes('viagra') || lower.includes('xxx');    
 }
 
 console.log(checkSpam('buy ViAgRA now'));
