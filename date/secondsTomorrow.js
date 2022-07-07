@@ -8,11 +8,11 @@ P.S. Функция должна работать в любой день, т.е.
 */
 
 function getSecondsToTomorrow() {
-    let nowTime = new Date();
+    const nowTime = new Date();
 
-    let tomorrow = new Date(nowTime.getFullYear(), nowTime.getMonth(), nowTime.getDate() + 1);
+    const tomorrow = new Date(nowTime.getFullYear(), nowTime.getMonth(), nowTime.getDate() + 1);
 
-    let res = (tomorrow - nowTime);
+    const res = (tomorrow - nowTime);
 
     return Math.round(res / 1000);
 }

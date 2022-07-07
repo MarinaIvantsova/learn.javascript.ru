@@ -9,6 +9,7 @@ alert( getLocalDay(date) );       // вторник, нужно показать
 
 function getLocalDay(date) {
     let day = date.getDay();
+    
 
     if (day == 0) {
         day = 7;
