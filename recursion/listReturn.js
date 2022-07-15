@@ -66,4 +66,4 @@ function printList(list) {
     console.log(list.value);
 }
 
-console.log(printList(list));
+printList(list);
