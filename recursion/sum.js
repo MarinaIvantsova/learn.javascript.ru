@@ -58,7 +58,10 @@ console.log(sumTo(100));
 //// Второй способ
 
 function sumTo(n) {
-    if (n === 1) {return n};
+    if (n === 1) {
+        return n
+    }
+    
     return n + sumTo(n - 1);
 }
 
