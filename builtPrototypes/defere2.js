@@ -15,16 +15,16 @@ f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
 //Мой способ:
 
 Function.prototype.defer = function (ms) {
-    return (num1, num2) => {
-
-        setTimeout(this, ms, num1, num2);
+    return (...args) => {
+      setTimeout(this, ms, args[0], args[1]);
     };
-};
-function f(a, b) {
+  };
+  
+  function f(a, b) {
     console.log(a + b);
-}
-
-f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
+  }
+  
+  f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
 
 //Второй способ:
 
