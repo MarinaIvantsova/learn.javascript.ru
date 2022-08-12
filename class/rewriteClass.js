@@ -13,18 +13,21 @@ class Clock {
         let date = new Date();
 
         let hours = date.getHours();
-        if (hours < 10) hours = '0' + hours;
+
+        let fixedHours = String(hours).padStart(2, "0");
 
         let mins = date.getMinutes();
-        if (mins < 10) mins = '0' + mins;
+
+        let fixedMins = String(mins).padStart(2, 0);
 
         let secs = date.getSeconds();
-        if (secs < 10) secs = '0' + secs;
+
+        let fixedSecs = String(secs).padStart(2, "0");
 
         let output = this.template
-            .replace('h', hours)
-            .replace('m', mins)
-            .replace('s', secs);
+            .replace('h', fixedHours)
+            .replace('m', fixedMins)
+            .replace('s', fixedSecs);
 
         console.log(output);
     }
