@@ -16,7 +16,7 @@ Examples
 34 is not factored by 3, 5, or 7, so the result would be "34".
 */
 
-const convert = (number) => {
+/*const convert = (number) => {
     const obj = {
         3: "Pling",
         5: "Plang",
@@ -48,3 +48,15 @@ const convert = (number) => {
 };
 
 console.log(convert(9));
+*/
+
+//Рефакторинг:
+
+const raindrops = {
+    3: "Pling",
+    5: "Plang",
+    7: "Plong"
+};
+
+const convert = number => Object.entries(raindrops)
+    .reduce((acc, [factor, rainDrop]) => (number % factor ? acc : acc + rainDrop), "") || `${number}`;
