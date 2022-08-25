@@ -31,12 +31,50 @@ after the trick the deck would have three 3's in place of the original.
 
 //Task 3. Find two cards from the exact middle of the deck
 
-const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function middleTwo(deck) {
-  const middle = deck.length / 2;
-  deck.slice(middle - 1, middle + 1);
-  return deck;
+// function middleTwo(deck) {
+//   const middle = deck.length / 2;
+//   deck.slice(middle - 1, middle + 1);
+//   return deck;
+// }
+
+// console.log(middleTwo(deck)); // [5, 6]
+
+// Task 4. The outside two cards will reappear in the middle of the deck
+// const deck = [1, 2, 3, 5, 6, 10];
+
+// function sandwichTrick(deck) {
+//   const middle = deck.length / 2;
+//   deck.splice(middle - 1, 0, deck.pop(), deck.shift());
+//   return deck;
+// }
+
+// console.log(sandwichTrick(deck)); // [2, 3, 10, 1, 5, 6]
+
+// Task 5. Every card that isn't 2 disappears
+// const deck = [1, 2, 3, 4, 10, 2];
+
+// function twoIsSpecial(deck) {
+//   return deck.filter((card) => card === 2);
+// }
+
+// console.log(twoIsSpecial(deck)); // [2, 2]
+
+//Task 6. Convert a shuffled deck into a perfectly ordered deck
+// const deck = [10, 1, 5, 3, 2, 8, 7];
+
+// function perfectlyOrdered(deck) {
+//   return deck.sort((a, b) => a - b);
+// }
+
+// console.log(perfectlyOrdered(deck)); //[1, 2, 3, 5, 7, 8, 10]
+
+//Task 7. Reorder the deck
+function reorder(deck) {
+  return deck.reverse();
 }
 
-console.log(middleTwo(deck)); // [5, 6]
+const deck = [10, 1, 5, 3, 2];
+
+console.log(reorder(deck)); //[2, 3, 5, 1, 10]
