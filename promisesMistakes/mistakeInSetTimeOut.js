@@ -11,3 +11,11 @@ new Promise(function (resolve, reject) {
         throw new Error("Whoops!");
     }, 1000);
 }).catch(alert);
+
+//А что сделать, чтобы поймать эту ошибку?
+
+new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        reject(new Error("Whoops!"));
+    }, 1000);
+}).catch(alert);
