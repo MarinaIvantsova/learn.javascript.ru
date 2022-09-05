@@ -53,20 +53,52 @@ function cardTypeCheck(stack, card) {
 console.log(cardTypeCheck([1, 2, 3, 3, 4], cardType)); // 2
 
 
+// function determineOddEvenCards(stack, type) {
+//     const division = type ? 0 : 1;
+
+//     let count = 0;
+
+//     for (const card of stack) {
+//         if (card % 2 === division) {
+//             count += 1;
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true)); // 2
+
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false)); // 4
+
+// function determineOddEvenCards(stack, type) {
+//     const division = type ? 0 : 1;
+
+//     let count = 0;
+
+//     stack.forEach(card => {
+//         if (card % 2 === division) {
+//             count += 1;
+//         }
+//     })
+//     return count;
+// }
+
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true)); // 2
+
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false)); // 4
+
 function determineOddEvenCards(stack, type) {
     const division = type ? 0 : 1;
-
-    let count = 0;
-
-    for (const card of stack) {
-        if (card % 2 === division) {
-            count += 1;
-        }
-    }
-
-    return count;
-}
-
-console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true)); // 2
-
-console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false)); // 4
+  
+    return stack.reduce((acc, card) => {
+      if (card % 2 === division) {
+        return ++acc;
+      }
+      return acc;
+    }, 0);
+  }
+  
+  console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true)); // 2
+  
+  console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false)); // 4
