@@ -33,7 +33,7 @@ class Matrix {
     constructor(str) {
       this.matrix = str
         .split("\n")
-        .map((row) => row.split(" ").map((char) => Number(char)));
+        .map((row) => row.split(" ").map((elem) => Number(elem)));
     }
   
     get rows() {
