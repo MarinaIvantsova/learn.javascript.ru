@@ -5,11 +5,15 @@
 console.log(fetch('../promiseChain/github.json')
      .then(response => response.json())
      .then(user => fetch(`https://api.github.com/users/${user.login}`))
-     .then(response => console.log(response))
-    // .then(gitHubUser => {
-    //     let img = document.createElement('img');
-    //     img.src = gitHubUser.avatar_url;
-    //     document.body.append(img);
-    //     setTimeout(() => img.remove(), 3000);
-    // })
+     .then(response => response.json())
+    .then(gitHubUser => new Promise(function(resolve, reject) {
+        let img = document.createElement('img');
+        img.src = gitHubUser.avatar_url;
+        document.body.append(img);
+        setTimeout(() => {
+            img.remove();
+            return resolve(gitHubUser);
+        }, 3000);
+    
+    }))
     );
