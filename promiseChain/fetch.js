@@ -24,7 +24,7 @@ function loadJson(url) {
 }
 
 function loadGithubUser(name) {
-    return fetch(`https://api.github.com/users/${name}`)
+    return fetch(`https://api.githb.com/users/${name}`)
         .then(response => response.json());
 }
 
@@ -45,3 +45,4 @@ loadJson('../promiseChain/github.json')
     .then((user) => loadGithubUser(user.login))
     .then(showAvatar)
     .then((gitHubUser) => console.log(`Завершен показ пользователя: ${gitHubUser.name}`))
+    .catch(error => console.log(error.message));
