@@ -109,11 +109,8 @@ returns the list of unique artists in the playlist.
 Note that the names of the tracks are formatted like <SONG> - <ARTIST>.
 */
 function listArtists(playlist) {
-    let newSet = new Set();
-    for (const item of new Set(playlist)) {
-        newSet.add(item.split("- ")[1]);
-    }
-    return [...newSet];
+    const artists = playlist.map((item) => item.split("- ")[1]);
+    return [...new Set(artists)];
 }
 const playlist = [
     'All Mine - Portishead',
