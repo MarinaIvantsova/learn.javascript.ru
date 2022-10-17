@@ -9,7 +9,7 @@ const loadImage = (url) => {
       request.onload = function () {
         if (request.status === 200) {
           // Если успешный, то резолвим промис
-          resolve(request.response);
+          resolve(request.responseURL);
         } else {
           // Если нет, то реджектим промис
           reject(Error("Произошла ошибка. Код ошибки:" + request.statusText));
@@ -24,8 +24,9 @@ const loadImage = (url) => {
     loadImage(url).then(
       function (result) {
         const img = new Image();
-        var imageURL = window.URL.createObjectURL(result);
+        var imageURL = result;
         img.src = imageURL;
+        img.width = 550;
         document.querySelector("body").appendChild(img);
       },
       function (err) {
@@ -34,4 +35,4 @@ const loadImage = (url) => {
     );
   };
   
-  embedImage(new URL('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F02%2F17%2F21014-Good-old-Fashioned-Pancakes-mfs_002.jpg'));
+  embedImage(new URL("https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"));
