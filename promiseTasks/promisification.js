@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 // function loadScript(src, callback) {
 //     let script = document.createElement('script');
 //     script.src = src;
@@ -22,7 +26,11 @@ let loadScriptPromise = function(src) {
 
 // использование:
 // loadScriptPromise('path/script.js').then(...)
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> master
 //Функция вызывается  с задержкой
 // function delay(ms, callback) {
 //   setTimeout(callback, ms);
@@ -59,4 +67,8 @@ function delay1(ms, callback) {
     console.log("timeouted func");
   }).catch((err) => console.log(err.message));
   
+<<<<<<< HEAD
+>>>>>>> master
+=======
+
 >>>>>>> master
